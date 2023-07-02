@@ -3,7 +3,9 @@ pipeline {
 
     stages {
         stage("Initial") {
-            echo "teste de pipe"
+            steps {
+                echo "teste de pipe"
+            }
         }
     }
 }
