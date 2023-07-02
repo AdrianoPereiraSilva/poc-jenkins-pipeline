@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("GIT SOURCE") {
             steps {
-                git url: "https://github.com/AdrianoPereiraSilva/poc-jenkins-pipeline.git", branch: "main",
+                git url: "https://github.com/AdrianoPereiraSilva/poc-jenkins-pipeline.git", branch: "main"
             }
         }
 
