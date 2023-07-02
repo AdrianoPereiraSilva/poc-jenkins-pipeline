@@ -11,7 +11,7 @@ pipeline {
         stage("DOCKER BUILD") {
             steps {
                 script {
-                    dockerapp = docker.build("pocjenkinspipeline/depeloy-with-jenkins:${env.BUILD_ID}",
+                    dockerapp = docker.build("apesilva2019/deploy-with-jenkins:${env.BUILD_ID}",
                     "-f Dockerfile .")
                 }
             }
