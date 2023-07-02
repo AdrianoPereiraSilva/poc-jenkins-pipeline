@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     dockerapp = docker.build("apesilva2019/deploy-with-jenkins:${env.BUILD_ID}",
-                    "-f Dockerfile .")
+                    " .")
                 }
             }
         }
