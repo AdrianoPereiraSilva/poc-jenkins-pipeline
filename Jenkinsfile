@@ -10,8 +10,7 @@ pipeline {
 
         stage("MVN BUILD") {
             steps {
-                    sh "./mvnw clean package -Dnative -Dquarkus.native.container-build=true -Dquarkus.native.native-image-xmx=6g"
-                }
+                sh "./mvnw clean package -Dnative -Dquarkus.native.container-build=true -Dquarkus.native.native-image-xmx=6g"
             }
         }
     }
