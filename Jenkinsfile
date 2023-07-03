@@ -8,11 +8,9 @@ pipeline {
             }
         }
 
-        stage("DOCKER BUILD") {
+        stage("MVN BUILD") {
             steps {
-                script {
-                    dockerapp = docker.build("apesilva2019/deploy-with-jenkins:${env.BUILD_ID}",
-                    " .")
+                    sh "./mvnw clean package -Dnative -Dquarkus.native.container-build=true -Dquarkus.native.native-image-xmx=6g"
                 }
             }
         }
