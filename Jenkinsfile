@@ -23,7 +23,7 @@ pipeline {
         stage("BUILD IMAGE") {
             steps {
                 script {
-                    dockerImage = docker.build("apesilva2019/deploy-with-jenkins:${env.BUILD_ID}",
+                    dockerImage = docker.build("asilva2019/poc-jenkins-pipeline:${env.BUILD_ID}",
                     " .")
                 }
             }
