@@ -20,12 +20,18 @@ pipeline {
             }
         }
 
-        stage("DOCKER BUILD") {
+        stage("BUILD IMAGE") {
             steps {
                 script {
                     dockerapp = docker.build("apesilva2019/deploy-with-jenkins:${env.BUILD_ID}",
                     " .")
                 }
+            }
+        }
+
+        stage('PUSH IMAGE') {
+            withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
+            dockerImage.push()
             }
         }
     }
