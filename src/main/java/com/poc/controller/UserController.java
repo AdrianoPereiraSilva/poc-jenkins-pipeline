@@ -29,9 +29,9 @@ public class UserController implements UserApi {
 
     @Override
     public List<UserResponse> findAll(){
+
         List<UserEntity> userEntities = UserEntity.findAll().list();
 
-        List<UserResponse> response = userMapper.toListUserResponse(userEntities);
-        return response;
+        return userMapper.toListUserResponse(userEntities);
     }
 }
