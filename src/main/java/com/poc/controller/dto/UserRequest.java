@@ -6,6 +6,10 @@ public class UserRequest {
 
     @NotNull
     public String name;
+
+    @NotNull
     public String address;
+
+    @NotNull
     public String age;
 }
